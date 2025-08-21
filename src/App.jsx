@@ -2,18 +2,19 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [adiconar, setAdionar] = useState([])
+  const [adiconar, setAdicionar] = useState([])
   const [mensagem, setMensagem] = useState("")
 
   const click = () => {
-    if (mensagem.trim !==("")){
-      setAdionar([...adiconar,mensagem])
+    if (mensagem.trim !== ("")){
+     setAdicionar([...adiconar,mensagem])
     } setMensagem("")
   }
 
-  const mudança = (e) => {
+  const mudanca = (e) =>{
     setMensagem(e.target.value)
   }
+  
 
 
   return (
@@ -26,7 +27,8 @@ function App() {
             className='input' 
             placeholder='Adicionar uma tarefa' 
             value={mensagem}
-            onChange={(mudança)}
+            onChange={(mudanca)}
+            
             
           />
           <button className='button' onClick={(click)} >
